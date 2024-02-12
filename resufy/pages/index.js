@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import Loader from './loader.js'
+import WelcomeBox from './WelcomeBox.js';
+import buttonstyle from './Button.module.css'
+import CardComponent from './cardcomponent.js';
 
 const Display = ({ answers, loading }) => {
   return (
@@ -9,11 +12,11 @@ const Display = ({ answers, loading }) => {
         <div>
           <h1 style={questionsHeaderStyle}>Questions:</h1>
           {answers.map((answer, index) => (
-            <p key={index} style={questionItemStyle}>{answer}</p>
+           <CardComponent question={answer}/>
           ))}
         </div>
       )}
-      {!loading && answers.length === 0 && <h1 style={noAnswersStyle}>No answers available.</h1>}
+      {!loading && answers.length === 0 && <h1 style={noAnswersStyle}>No questions available.</h1>}
     </div>
   );
 };
@@ -21,6 +24,9 @@ const Display = ({ answers, loading }) => {
 const Home = () => {
   const [answers, setAnswers] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+
+
+
 
   const uploadPDF = async () => {
     setIsLoading(true);
@@ -53,12 +59,13 @@ const Home = () => {
 
   return (
     <div style={homeContainerStyle}>
-      <h1 style={uploadHeaderStyle}>Upload PDF</h1>
+      
+      <WelcomeBox />
       <form id="pdfForm" encType="multipart/form-data" style={uploadFormStyle}>
         <label htmlFor="pdfFile" style={fileLabelStyle}>Choose a PDF file:</label>
-        <input type="file" id="pdfFile" accept=".pdf" required style={fileInputStyle} />
-        <button type="button" onClick={uploadPDF} style={uploadButtonStyle}>
-          Upload
+        <input type="file" id="pdfFile" accept=".pdf" required className={buttonstyle.button} />
+        <button type="button" onClick={uploadPDF} className={buttonstyle.button}>
+          Submit
         </button>
       </form>
 
@@ -72,6 +79,7 @@ const homeContainerStyle = {
   textAlign: 'center',
   fontFamily: 'Arial, sans-serif',
   marginTop: '20px',
+  backgroundColor : 'black'
 };
 
 const uploadHeaderStyle = {
@@ -81,6 +89,7 @@ const uploadHeaderStyle = {
 
 const uploadFormStyle = {
   marginTop: '10px',
+  height: '100%'
 };
 
 const fileLabelStyle = {
@@ -107,6 +116,8 @@ const uploadButtonStyle = {
   borderRadius: '5px',
   cursor: 'pointer',
 };
+
+
 
 const displayContainerStyle = {
   margin: '20px',

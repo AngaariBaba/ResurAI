@@ -1,0 +1,29 @@
+/* Card styles */
+.card {
+    width:100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    color: white;
+    
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .cardcontent {
+    padding: 20px;
+  }
+  
+  .cardtitle {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .cardpara {
+    font-size: 14px;
+    color: #555;
+  }
+  
