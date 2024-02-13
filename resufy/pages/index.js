@@ -62,8 +62,8 @@ const Home = () => {
       
       <WelcomeBox />
       <form id="pdfForm" encType="multipart/form-data" style={uploadFormStyle}>
-        <label htmlFor="pdfFile" style={fileLabelStyle}>Choose a PDF file:</label>
-        <input type="file" id="pdfFile" accept=".pdf" required className={buttonstyle.button} />
+        <label htmlFor="pdfFile" className={buttonstyle.button}>Choose a PDF file:</label>
+        <input type="file" id="pdfFile" accept=".pdf" style={{display: 'none'}} />
         <button type="button" onClick={uploadPDF} className={buttonstyle.button}>
           Submit
         </button>
@@ -78,7 +78,7 @@ const Home = () => {
 const homeContainerStyle = {
   textAlign: 'center',
   fontFamily: 'Arial, sans-serif',
-  marginTop: '20px',
+  
   backgroundColor : 'black'
 };
 
