@@ -3,9 +3,20 @@ import Loader from './loader.js'
 import WelcomeBox from './WelcomeBox.js';
 import buttonstyle from './Button.module.css'
 import CardComponent from './cardcomponent.js';
+import AI from './AI.js';
+
 
 const Display = ({ answers, loading }) => {
   return (
+    <>
+   <div>
+    <style jsx global>{`
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    `}</style>
+  </div>
     <div style={displayContainerStyle}>
       {loading && <Loader />}
       {!loading && answers.length > 0 && (
@@ -18,6 +29,7 @@ const Display = ({ answers, loading }) => {
       )}
       {!loading && answers.length === 0 && <h1 style={noAnswersStyle}>No questions available.</h1>}
     </div>
+    </>
   );
 };
 
@@ -78,7 +90,6 @@ const Home = () => {
 const homeContainerStyle = {
   textAlign: 'center',
   fontFamily: 'Arial, sans-serif',
-  
   backgroundColor : 'black'
 };
 
@@ -120,7 +131,7 @@ const uploadButtonStyle = {
 
 
 const displayContainerStyle = {
-  margin: '20px',
+
   position: 'relative',
 };
 
