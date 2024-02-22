@@ -14,7 +14,7 @@ function WelcomeBox() {
      
     </div>
  
-            <p className={style.welcomemessage}>A WebApp That Asks Questions Based On Your Resume!<br/>
+            <p className={style.welcomemessage}>Get Your Resume Checked for questions<br/>
             <span className={style.welcomesubmessage}>Upload again for new questions!</span></p>
         </div>
 

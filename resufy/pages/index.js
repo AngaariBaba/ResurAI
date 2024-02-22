@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import Loader from './loader.js'
-import WelcomeBox from './WelcomeBox.js';
-import buttonstyle from './Button.module.css'
-import CardComponent from './cardcomponent.js';
-import AI from './AI.js';
+import WelcomeBox from './components/WelcomeBox.js';
+import buttonstyle from './components/Button.module.css'
+import CardComponent from './components/cardcomponent.js';
+import AI from './components/AI.js';
+
 
 
 const Display = ({ answers, loading }) => {

@@ -1,7 +1,7 @@
 .welcomebox{
     width: 100%;
     height: auto;
-    background : linear-gradient(rgb(8, 8, 8),rgb(0, 0, 0));
+    background : linear-gradient(rgb(0, 0, 0),rgb(54, 54, 54));
    background-size: cover;
     text-align: center;
     align-items: center;
@@ -25,6 +25,7 @@
     font-size: 6vh;
     font-weight: 800;
     padding-bottom: 15px;
+    color: #00fff9;
 }
 
 .welcomesubmessage{
