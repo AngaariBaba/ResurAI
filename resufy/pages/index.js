@@ -51,7 +51,7 @@ const Home = () => {
         const formData = new FormData();
         formData.append('pdfFile', file);
 
-        const response = await fetch('http://localhost:3002/upload', {
+        const response = await fetch('https://resurai2-51dl.onrender.com/upload', {
           method: 'POST',
           body: formData,
         });
